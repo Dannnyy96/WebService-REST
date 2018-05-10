@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<title>Homepage</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="./scripts/Buttons.js" type="text/javascript"></script> -->
+
+</head>
+<body>
+<fieldset>
+
+<table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
+      </tr>
+      <tr>
+       <td><a href="http://localhost:8080/AssignmentRest/rest/films/getAllFilmsXML">Get all Films in XML</a></td>
+      </tr>
+      <tr>
+      <td><a href="http://localhost:8080/AssignmentRest/rest/films/getAllFilmsJSON">Get all Films in JSON</a></td>
+      </tr>
+    </table>
+<br>
+<br>
+
+<form name="getafilm" action="http://localhost:8080/AssignmentRest/rest/films/getFilmXML" method="post">
+Film title: <input  type="text" name="title">
+	<input type="submit"  name="getfilmxml" value="Get Film(s) you search for in xml" />
+</form>
+<br>
+
+<form name="getafilm" action="http://localhost:8080/AssignmentRest/rest/films/getFilmJSON" method="post">
+Film title: <input  type="text" name="title">
+	<input type="submit"  name="getfilmjson" value="Get Film(s) you search for in JSON" />
+</form>
+<br>
+<form name="insertfilm" action="http://localhost:8080/AssignmentRest/rest/films/insertFilm" method="post">
+ID: <input  type="text" name="id"><br>
+Title: <input  type="text" name="title"><br>
+Year: <input  type="text" name="year"><br>
+Director: <input  type="text" name="director"><br>
+Stars: <input  type="text" name="stars"><br>
+Review: <input  type="text" name="review"><br>
+<input type="submit"  name="insert" value="Insert a film" />
+</form>
+       
+</fieldset>
+</body>
+</html>
